@@ -29,6 +29,9 @@
 .idea/**/dbnavigator.xml
 
 # Gradle
+.gradle/*
+**/build/
+!src/**/build/
 .idea/**/gradle.xml
 .idea/**/libraries
 
@@ -144,7 +147,8 @@ replay_pid*
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
