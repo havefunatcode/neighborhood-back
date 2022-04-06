@@ -11,11 +11,24 @@ sourceCompatibility = '11'
 repositories {
 	mavenCentral()
 }
+// Test를 위해 반드시 필요
+test {
+	useJUnitPlatform()
+}
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	// test
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+	// devtools : auto reload
+	developmentOnly('org.springframework.boot:spring-boot-devtools')
+	// mysql
 	runtimeOnly 'mysql:mysql-connector-java'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 }
